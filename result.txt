@@ -1,0 +1,6 @@
+1. The pool of strings in Java is maintained for saving space and for faster comparisons.
+String Interning is a method of storing only one copy of each distinct String Value, which must be immutable.
+It helps in the taskto store many similar strings.
+2. Links for each line and substring also need some space. Redefinition of variables helps to save free heap space.
+3. For this reasons value of used memory decreased from 8MB to 7KB
+
