@@ -13,7 +13,8 @@ public class Main {
 
     private static void readFile(String name) {
         try(BufferedReader br = new BufferedReader(new FileReader(new File(name)))) {
-            for(String line; (line = br.readLine()) != null; ) {
+            String line;
+            for(; (line = br.readLine()) != null; ) {
                 processLine(line);
             }
             Thread.sleep(1000000);
@@ -24,8 +25,7 @@ public class Main {
 
     private static void processLine(String line) {
         for (int i = 0; i < line.length(); i = i + 4) {
-            String subString = line.substring(i, i + 3);
-            list.add(subString);
+            list.add(line.substring(i, i + 3).intern());
         }
     }
 }
